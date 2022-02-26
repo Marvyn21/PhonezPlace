@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhonezKe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="https://www.phoneplacekenya.com/wp-content/uploads/2021/04/footer.png" alt="Phoneplace" class="img-header-logo" width="251" height="139">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <div class="overlay"></div>
+            <img src="./images/images/mobile1.jpg" alt="" class="mobile">
+            <div id="circle">
+                <div class="features one">
+                    <img src="./images/images/camera.png" alt="">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+                <div class="features two">
+                    <img src="/images/images/processor.png" alt="">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapddragon Octa-Core 11nm</p>
+                    </div>
+                </div>
+                <div class="features three">
+                    <img src="./images/images/display.png" alt="">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="features four">
+                    <img src="./images/images/battery.png" alt="">
+                    <div>
+                        <h1>Battery Life</h1>
+                        <p>5000mAh, 720Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="./images/images/arrow.png" alt="" id="upBtn">
+            <h3>Features</h3>
+            <img src="./images/images/arrow.png" alt="" id="downBtn">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(+90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
